@@ -1,0 +1,27 @@
+<%- include("partials/side-bar.ejs") %>
+
+<!-- Edit and Repost the post.  -->
+<form class="main-block-container" action="/repoPost" method="POST">
+    <div class="content-container">
+        <h3 class="col-10">
+            <label for="post_title">Title </label>            
+        </h3>
+        <div class="col-80">
+            <textarea id="post_title" name="post_title" required><%= post.title %></textarea>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <h3 class="col-10">
+            <label for="post_content">Text </label>
+        </h3>
+        <div class="col-80">
+            <textarea id="post_content" name="post_content" required><%= post.content %></textarea>
+        </div>
+    </div>
+
+    <input type="hidden" id="post_id" name="post_id" value="<%= post.id %>" />
+
+    <button type="submit" class="buttons postbtn">Post</button>
+</form>
+    

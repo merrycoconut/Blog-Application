@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">    
+    <title>Blog Application</title>
+</head>
+<body class="side-bar-body">
+    <!-- Side-bar template.  -->
+    <div class="side-bar">        
+        <h2>All Posts</h2>
+        
+        <% for (let post of posts) { %>    
+            <a href="/viewPosts/<%= post.title %>">
+                <%= post.title %>
+            </a>
+        <% } %>   
+        
+        <a class="buttons" href="/">Back to HP</a>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

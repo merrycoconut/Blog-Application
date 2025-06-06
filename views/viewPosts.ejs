@@ -1,0 +1,21 @@
+<%- include("partials/side-bar.ejs") %>
+
+<!-- View, Edit and Delete the post. -->
+<div class="main-block-container">
+    <h2 class="title"> <%= post.title %> </h2>
+
+    <p class="date_create"> <%= post.date_create.toDateString() %> </p>
+    <p class="content"> <%= post.content %> </p>
+    
+    <div class="buttons">
+        <form action="/editPost" method="POST">
+            <button class="editbtn" type="submit" name="<%= post.id %>">Edit</button>
+        </form>
+        
+        <form action="/deletePost" method="POST">
+            <button class="deletebtn" type="submit" name="<%= post.id %>">Delete</button>
+        </form>
+    </div>
+    
+</div>
+    
